@@ -26,7 +26,7 @@ app.get('/', function (req, res) {
 app.use('/api/post', post);
 app.use('/api/user', user);
 
-app.listen('3000', (err, success) => {
+app.listen(process.env.PORT || 3000, (err, success) => {
     if (err) {
         console.log('Unable to run on port 3000');
     } else {
