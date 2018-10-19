@@ -8,13 +8,13 @@ const post = require('./routes/post');
 const user = require('./routes/user');
 
 
-mongoose.connect(mongurl, { useNewUrlParser: true }, (err, success) => {
-    if (err) {
-        console.log('Unable to connect mongodb');
-    } else {
-        console.log('Successfully connected to mongodb');
-    }
-});
+// mongoose.connect(mongurl, { useNewUrlParser: true }, (err, success) => {
+//     if (err) {
+//         console.log('Unable to connect mongodb');
+//     } else {
+//         console.log('Successfully connected to mongodb');
+//     }
+// });
 
 app.use(express.static('./UI'));
 app.use(bodyParser.json())
