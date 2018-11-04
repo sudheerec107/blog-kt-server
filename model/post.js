@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 const postSchema = new schema({
-    title: { type: String, required: true, unique: true },
-    body: { type: String, required: true },
+    // title: { type: String, required: true, unique: true },
+    html: { type: String, required: true },
     creaded_on:  { type: Date },
-    update_on: { type: Date }
+    update_on: { type: Date },
+    approved: { type: Boolean }
 });
 
 postSchema.pre('save', function(next) {

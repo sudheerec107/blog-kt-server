@@ -15,7 +15,7 @@ router.get('/', function(req, res){
 });
 router.post('/', function(req, res) {
     console.log('req.body    >', req.body)
-    var post_db = new post(req.body);
+    var post_db = new post(req.body.params);
     post_db.save(function(err, success) {
         if (err) {
             console.log('eror  >', err);
